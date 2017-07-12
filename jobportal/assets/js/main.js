@@ -237,7 +237,8 @@ Framework7.prototype.plugins.main = function (app, params) {
             console.log('xx');
             $$("a[data-cmd='button_logIn']").on('click',function(){
                 var form = $("#form_logIn").serializeArray();
-                console.log(form);
+                var ajax = system.ajax('jobportal/assets/harmony/Process.php?do-logIn',data);
+                console.log(ajax.responseText);
             });
         }
 
